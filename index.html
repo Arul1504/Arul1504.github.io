@@ -5,92 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Syahrul Rahmadan | Portofolio</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fdf6f0;
-      color: #333;
+      background-color: #0f172a;
+      color: #fff;
     }
-    header {
-      background-color: #ffeedd;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    nav {
+      background: #1e293b;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    nav h1 {
+      font-size: 1.5rem;
+      color: #38bdf8;
     }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
     }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    h2 {
-      color: #444;
-      border-bottom: 2px solid #ffc;
-      padding-bottom: 0.3rem;
-    }
-    ul {
-      list-style: square;
-      padding-left: 1.5rem;
-    }
-    .contact a {
-      display: inline-block;
-      margin-right: 1rem;
+    nav ul li a {
+      color: #fff;
       text-decoration: none;
-      color: #0066cc;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text h1 span {
+      color: #38bdf8;
+    }
+
+    .hero-text p {
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      margin-right: 1rem;
+      padding: 0.7rem 1.2rem;
+      background-color: #38bdf8;
+      color: #0f172a;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #0ea5e9;
+    }
+
+    .hero-image {
+      margin-top: 2rem;
+    }
+
+    .hero-image img {
+      width: 250px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #38bdf8;
+    }
+
     footer {
       text-align: center;
+      padding: 2rem;
+      color: #94a3b8;
       font-size: 0.9rem;
-      color: #777;
-      margin-top: 3rem;
-      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-image {
+        margin-top: 2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Syahrul Rahmadan</h1>
-    <p>Mahasiswa Sistem Informasi | Calon Data Analyst</p>
-  </header>
-
-  <section>
-    <h2>Tentang Saya</h2>
-    <p>
-      Saya adalah mahasiswa semester 7 di Universitas Bina Sarana Informatika, Program Studi Sistem Informasi.
-      Saya memiliki minat besar dalam bidang analisis data dan pemodelan sistem informasi.
-      Terbiasa menggunakan ERD dan UML (Use Case, Activity, Class Diagram) serta memiliki pemahaman yang baik tentang algoritma dan pemrograman berbasis objek.
-      Saya memiliki semangat belajar tinggi dan siap berkembang sebagai Data Analyst khususnya dalam aspek perancangan dan dokumentasi sistem berbasis data.
-    </p>
-  </section>
-
-  <section>
-    <h2>Proyek</h2>
+  <nav>
+    <h1>ArulPorto</h1>
     <ul>
-      <li><strong>Sistem Informasi Penjualan Baju</strong> – Web berbasis PHP & MySQL. Saya terlibat dalam analisis kebutuhan, penyusunan project charter, dan pengujian sistem.</li>
-      <li><strong>Optimalisasi Penjualan dengan Aplikasi Odoo</strong> – Menyusun ERD dan UML, serta mengimplementasikan program dalam modul Odoo.</li>
-      <li><strong>Analisa & Perancangan Sistem</strong> – Merancang spesifikasi database dan melakukan pengujian dengan metode Black Box Testing.</li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Project</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">CV</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <section>
-    <h2>Kontak</h2>
-    <div class="contact">
-      📧 <a href="mailto:rahmadansyahrul214@gmail.com">rahmadansyahrul214@gmail.com</a><br/>
-      📷 <a href="https://instagram.com/xy_z758" target="_blank">@xy_z758</a><br/>
-      🔗 <a href="https://linkedin.com/in/syahrul-rahmadan-80362231a" target="_blank">LinkedIn Syahrul</a>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Syahrul Rahmadan</span></h1>
+      <p>
+        Mahasiswa Sistem Informasi UBSI yang tertarik dalam bidang Data Analyst dan perancangan sistem.
+        Aktif mengembangkan skill analisis data, dokumentasi teknis, dan pengujian sistem berbasis web.
+      </p>
+      <div class="buttons">
+        <a href="mailto:rahmadansyahrul214@gmail.com">Email</a>
+        <a href="https://instagram.com/xy_z758" target="_blank">Instagram</a>
+        <a href="https://linkedin.com/in/syahrul-rahmadan-80362231a" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="profil.jpg" alt="Foto Profil Syahrul">
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Syahrul Rahmadan — Portofolio Pribadi
+    &copy; 2025 Syahrul Rahmadan. All rights reserved.
   </footer>
 
 </body>
