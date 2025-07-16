@@ -2,85 +2,217 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aktivitas dan Pengalaman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aktivitas dan Pengalaman Perkuliahan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    /* New color palette based on your screenshot */
+    :root {
+      --primary-bg: #1A202C; /* Dark blue from the screenshot's background */
+      --secondary-bg: #2D3748; /* Slightly lighter dark blue for header/footer (similar to screenshot's top bar) */
+      --accent-color: #63B3ED; /* Bright blue for links/highlights (similar to screenshot's buttons/name) */
+      --text-color: #E2E8F0; /* Light gray for main text (similar to screenshot's body text) */
+      --card-bg: #ffffff; /* White for project cards (good contrast) */
+      --card-text: #2D3748; /* Dark gray for text within white cards */
+      --border-radius: 12px;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1b2a;
-      color: white;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--primary-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #1b263b;
-      padding: 20px;
+      background-color: var(--secondary-bg);
+      padding: 30px 20px;
       text-align: center;
+      box-shadow: var(--shadow);
     }
 
     header h1 {
       margin: 0;
-      color: #00bfff;
+      color: var(--accent-color);
+      font-size: 2.8em;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     nav {
-      margin-top: 10px;
+      margin-top: 20px;
     }
 
     nav a {
-      color: white;
+      color: var(--text-color);
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    .project {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: var(--card-text); /* Ensure text in card is visible */
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .project h2 {
+      color: var(--card-text);
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .project h2 span.icon {
+      font-size: 1.2em; /* Adjust icon size */
+    }
+
+    .project ul {
+      padding-left: 25px;
+      margin-bottom: 0;
+      list-style: none; /* Remove default bullet */
+    }
+
+    .project ul li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 25px; /* Space for custom bullet */
+    }
+
+    .project ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    .project ul li::before {
+      content: '✔'; /* Custom bullet point */
+      color: var(--accent-color);
+      position: absolute;
+      left: 0;
       font-weight: bold;
     }
-    .project {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    footer {
+      background-color: var(--secondary-bg);
+      color: var(--text-color);
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     }
-    h2 {
-      color: #2c3e50;
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 1em;
+      }
+
+      .container {
+        margin: 30px auto;
+        padding: 0 15px;
+      }
+
+      .project {
+        padding: 25px;
+      }
+
+      .project h2 {
+        font-size: 1.5em;
+      }
     }
-    ul {
-      padding-left: 20px;
+
+    @media (max-width: 480px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 5px 0;
+      }
+
+      .project h2 {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Aktivitas Perkuliahan</h1>
+    <h1>Aktivitas dan Pengalaman Perkuliahan ✨</h1>
     <nav>
       <a href="index.html">Beranda</a>
-      <a href="galeri.html">Galery</a>
+      <a href="galeri.html">Galeri</a>
       <a href="cv.html">CV</a>
     </nav>
   </header>
- 
-  <div class="project">
-    <h2>🧵 Sistem Informasi Penjualan Baju Berbasis Web</h2>
-    <ul>
-      <li>Melakukan analisis kebutuhan dan menyusun project charter</li>
-      <li>Melakukan pengujian sistem serta mendukung tahap pengujian awal</li>
-    </ul>
+
+  <div class="container">
+    <div class="project">
+      <h2><span class="icon">💻</span> Sistem Informasi Penjualan Baju Berbasis Web</h2>
+      <ul>
+        <li>Melakukan **analisis kebutuhan** dan menyusun **project charter**.</li>
+        <li>Melakukan **pengujian sistem** serta mendukung tahap pengujian awal.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h2><span class="icon">🚀</span> Optimalisasi Penjualan Menggunakan Aplikasi Odoo</h2>
+      <ul>
+        <li>Menyusun **penggambaran program berbasis objek** (ERD, UML).</li>
+        <li>Mengimplementasikan gambaran program pada **modul yang sesuai di aplikasi Odoo**.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h2><span class="icon">🔬</span> Analisa dan Perancangan Sistem</h2>
+      <ul>
+        <li>Melakukan pengujian **Black Box Testing**.</li>
+        <li>Merancang **spesifikasi database sistem**.</li>
+      </ul>
+    </div>
   </div>
 
-  <div class="project">
-    <h2>📦 Optimalisasi Penjualan Menggunakan Aplikasi Odoo</h2>
-    <ul>
-      <li>Menyusun penggambaran program berbasis objek (ERD, UML)</li>
-      <li>Mengimplementasikan gambaran program pada modul yang sesuai di aplikasi Odoo</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h2>⚙️ Analisa dan Perancangan Sistem</h2>
-    <ul>
-      <li>Melakukan pengujian Black Box Testing</li>
-      <li>Merancang spesifikasi database sistem</li>
-    </ul>
-  </div>
-
+  <footer>
+    <p>&copy; 2025 Aktivitas Perkuliahan. Semua Hak Cipta Dilindungi.</p>
+  </footer>
 </body>
 </html>
