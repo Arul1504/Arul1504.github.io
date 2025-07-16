@@ -8,15 +8,15 @@
   <style>
     /* New color palette based on your screenshot */
     :root {
-      --primary-bg: #1A202C; /* Dark blue from the screenshot's background */
-      --secondary-bg: #2D3748; /* Slightly lighter dark blue for header/footer (similar to screenshot's top bar) */
-      --accent-color: #63B3ED; /* Bright blue for links/highlights (similar to screenshot's buttons/name) */
-      --text-color: #E2E8F0; /* Light gray for main text (similar to screenshot's body text) */
-      --card-bg: #ffffff; /* White for project cards (good contrast) */
-      --card-text: #2D3748; /* Dark gray for text within white cards */
-      --border-radius: 12px;
-      --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
+  --primary-bg: #1A202C;
+  --secondary-bg: #2D3748;
+  --accent-color: #63B3ED;
+  --text-color: #E2E8F0;
+  --card-bg: #ffffff; /* This MUST be white for the text to be visible */
+  --card-text: #2D3748; /* This is the color of the text *inside* the white card */
+  --border-radius: 12px;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
     body {
       margin: 0;
@@ -109,6 +109,7 @@
       position: relative;
       margin-bottom: 10px;
       padding-left: 25px; /* Space for custom bullet */
+      color: #2D3748 !important;
     }
 
     .project ul li:last-child {
