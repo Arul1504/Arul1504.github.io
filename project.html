@@ -1,219 +1,211 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aktivitas dan Pengalaman Perkuliahan</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* New color palette based on your screenshot */
     :root {
-  --primary-bg: #1A202C;
-  --secondary-bg: #2D3748;
-  --accent-color: #63B3ED;
-  --text-color: #E2E8F0;
-  --card-bg: #ffffff; /* This MUST be white for the text to be visible */
-  --card-text: #2D3748; /* This is the color of the text *inside* the white card */
-  --border-radius: 12px;
-  --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
+      --primary-bg: #fef9ef;
+      --nav-bg: #fcd34d;
+      --accent-color: #3b82f6;
+      --text-color: #1e293b;
+      --card-bg: #fff;
+      --card-text: #334155;
+      --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: var(--primary-bg);
       color: var(--text-color);
       line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
-    header {
-      background-color: var(--secondary-bg);
-      padding: 30px 20px;
-      text-align: center;
+    /* Header / Navbar */
+    nav {
+      background: var(--nav-bg);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
       box-shadow: var(--shadow);
     }
 
-    header h1 {
-      margin: 0;
+    nav h1 {
+      font-size: 1.8rem;
       color: var(--accent-color);
-      font-size: 2.8em;
       font-weight: 700;
-      letter-spacing: 1px;
     }
 
-    nav {
-      margin-top: 20px;
+    nav ul {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+      flex-wrap: wrap;
     }
 
-    nav a {
+    nav ul li a {
       color: var(--text-color);
       text-decoration: none;
-      margin: 0 20px;
       font-weight: 600;
-      font-size: 1.1em;
-      transition: color 0.3s ease, transform 0.3s ease;
+      transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    nav ul li a:hover {
       color: var(--accent-color);
-      transform: translateY(-2px);
     }
 
     .container {
       max-width: 960px;
       margin: 40px auto;
       padding: 0 20px;
-      flex-grow: 1;
     }
 
     .project {
       background-color: var(--card-bg);
-      border-radius: var(--border-radius);
-      padding: 30px;
-      margin-bottom: 35px;
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: var(--card-text); /* Ensure text in card is visible */
+      padding: 25px;
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
     }
 
     .project:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
     .project h2 {
-      color: var(--card-text);
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 1.8em;
-      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
+      font-size: 1.6em;
       gap: 10px;
-    }
-
-    .project h2 span.icon {
-      font-size: 1.2em; /* Adjust icon size */
     }
 
     .project ul {
       padding-left: 25px;
-      margin-bottom: 0;
-      list-style: none; /* Remove default bullet */
+      margin-bottom: 15px;
     }
 
     .project ul li {
-      position: relative;
-      margin-bottom: 10px;
-      padding-left: 25px; /* Space for custom bullet */
-      color: #2D3748 !important;
+      margin-bottom: 8px;
+      color: var(--card-text);
     }
 
-    .project ul li:last-child {
-      margin-bottom: 0;
+    .project-image {
+      text-align: center;
+      margin-top: 15px;
     }
 
-    .project ul li::before {
-      content: '✔'; /* Custom bullet point */
-      color: var(--accent-color);
-      position: absolute;
-      left: 0;
-      font-weight: bold;
+    .project-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .project-image img:hover {
+      transform: scale(1.02);
     }
 
     footer {
-      background-color: var(--secondary-bg);
+      background-color: var(--nav-bg);
       color: var(--text-color);
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2em;
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      nav a {
-        margin: 0 10px;
-        font-size: 1em;
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      nav h1 {
+        font-size: 1.5rem;
       }
 
       .container {
-        margin: 30px auto;
         padding: 0 15px;
       }
 
-      .project {
-        padding: 25px;
-      }
-
       .project h2 {
-        font-size: 1.5em;
-      }
-    }
-
-    @media (max-width: 480px) {
-      nav {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav a {
-        margin: 5px 0;
-      }
-
-      .project h2 {
-        flex-direction: column;
-        align-items: flex-start;
+        font-size: 1.3em;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Aktivitas dan Pengalaman Perkuliahan ✨</h1>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="galeri.html">Galeri</a>
-      <a href="about.html">About Me</a>
-    </nav>
-  </header>
 
+  <!-- Header / Navbar -->
+  <nav>
+    <h1>ArulPorto</h1>
+    <ul>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="galeri.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Konten Utama -->
   <div class="container">
     <div class="project">
-      <h2><span class="icon">💻</span> Sistem Informasi Penjualan Baju Berbasis Web</h2>
+      <h2><span>💻</span> Sistem Informasi Penjualan Baju</h2>
       <ul>
         <li>Melakukan analisis kebutuhan dan menyusun project charter.</li>
         <li>Melakukan pengujian sistem serta mendukung tahap pengujian awal.</li>
       </ul>
+      <div class="project-image">
+        <img src="image/sistem-penjualan.png" alt="Tugas Sistem Penjualan" />
+      </div>
     </div>
 
     <div class="project">
-      <h2><span class="icon">🚀</span> Optimalisasi Penjualan Menggunakan Aplikasi Odoo</h2>
+      <h2><span>🚀</span>Melakukan Pengujian Web Menggunakan Black Box Texting</h2>
       <ul>
-        <li>Menyusun penggambaran program berbasis objek (ERD, UML).</li>
-        <li>Mengimplementasikan gambaran program pada modul yang sesuai di aplikasi Odoo.</li>
+        <li>Melakukan pengujian fitur website untuk menghindari kesalahan sistem berjalan.</li>
+        <li>Mendokumentasi pengujian dengan mencatat skenario pengujian, test case, hasil yang diharapkan, hasil pengujian, dan kesimpulan.</li>
       </ul>
+      <div class="project-image">
+        <img src="image/blackbox.png" alt="Tugas Odoo" />
+      </div>
     </div>
 
     <div class="project">
-      <h2><span class="icon">🔬</span> Analisa dan Perancangan Sistem</h2>
+      <h2><span>🔬</span> Analisa & Perancangan Sistem</h2>
       <ul>
-        <li>Melakukan pengujian Black Box Testing.</li>
+        <li>Melakukan analisis kebutuhan sistem sistem</li>
         <li>Merancang spesifikasi database sistem.</li>
       </ul>
+      <div class="project-image">
+        <img src="image/db.png" alt="Tugas Analisa Sistem" />
+      </div>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Aktivitas Perkuliahan. Semua Hak Cipta Dilindungi.</p>
+    &copy; 2025 Syahrul Rahmadan. All rights reserved.
   </footer>
+
 </body>
 </html>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Syahrul Rahmadan | Portofolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -11,41 +12,49 @@
       box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
-      color: #fff;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fef9ef;
+      color: #333;
+      line-height: 1.6;
     }
+
     nav {
-      background: #1e293b;
+      background: #fcd34d;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
+
     nav h1 {
-      font-size: 1.5rem;
-      color: #38bdf8;
+      font-size: 1.8rem;
+      color: #1d4ed8;
+      font-weight: 700;
     }
+
     nav ul {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
       list-style: none;
     }
+
     nav ul li a {
-      color: #fff;
+      color: #1e293b;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       transition: color 0.3s ease;
     }
+
     nav ul li a:hover {
-      color: #38bdf8;
+      color: #2563eb;
     }
 
     .hero {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 4rem 2rem;
+      padding: 3rem 2rem;
       flex-wrap: wrap;
     }
 
@@ -56,48 +65,58 @@
     .hero-text h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: #1e40af;
     }
 
     .hero-text h1 span {
-      color: #38bdf8;
+      color: #f97316;
     }
 
     .hero-text p {
       margin-bottom: 2rem;
-      line-height: 1.6;
-      color: #cbd5e1;
+      color: #475569;
     }
 
     .buttons a {
       text-decoration: none;
       margin-right: 1rem;
       padding: 0.7rem 1.2rem;
-      background-color: #38bdf8;
-      color: #0f172a;
-      border-radius: 6px;
+      background-color: #3b82f6;
+      color: #fff;
+      border-radius: 8px;
       font-weight: bold;
       transition: background 0.3s;
+      display: inline-block;
+      margin-top: 0.5rem;
     }
 
     .buttons a:hover {
-      background-color: #0ea5e9;
+      background-color: #2563eb;
     }
 
     .hero-image {
       margin-top: 2rem;
+      text-align: center;
     }
 
     .hero-image img {
-      width: 250px;
+      width: 220px;
       border-radius: 50%;
-      box-shadow: 0 0 20px #38bdf8;
+      box-shadow: 0 0 20px rgba(255, 179, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      color: #94a3b8;
+      background-color: #fde68a;
+      color: #1e293b;
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
 
     @media (max-width: 768px) {
@@ -105,8 +124,25 @@
         flex-direction: column;
         text-align: center;
       }
+
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
       .hero-image {
         margin-top: 2rem;
+      }
+
+      .buttons a {
+        margin: 0.5rem auto;
       }
     }
   </style>
@@ -119,7 +155,6 @@
       <li><a href="about.html">About Me</a></li>
       <li><a href="project.html">Project</a></li>
       <li><a href="galeri.html">Gallery</a></li>
-     
     </ul>
   </nav>
 
@@ -127,7 +162,7 @@
     <div class="hero-text">
       <h1>Hi, I'm <span>Syahrul Rahmadan</span></h1>
       <p>
-        Mahasiswa Sistem Informasi UBSI yang tertarik dalam bidang Data Analyst dan perancangan sistem.
+        Mahasiswa Sistem Informasi UBSI yang tertarik dalam bidang System Analyst, Perancangan & Pengujian Sistem.<br />
         Aktif mengembangkan skill analisis data, dokumentasi teknis, dan pengujian sistem berbasis web.
       </p>
       <div class="buttons">

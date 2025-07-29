@@ -8,19 +8,19 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1b2a;
-      color: white;
+      background-color: #f0f9ff;
+      color: #1e293b;
     }
 
     header {
-      background-color: #1b263b;
+      background-color: #fcd34d;
       padding: 20px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      color: #00bfff;
+      color: #1e293b;
     }
 
     nav {
@@ -28,10 +28,15 @@
     }
 
     nav a {
-      color: white;
+      color: #1e293b;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ea5e9;
     }
 
     section {
@@ -42,7 +47,7 @@
 
     section h2 {
       text-align: center;
-      color: #00bfff;
+      color: #0ea5e9;
       font-size: 32px;
       margin-bottom: 20px;
     }
@@ -52,6 +57,7 @@
       max-width: 800px;
       margin: 0 auto 40px;
       font-size: 16px;
+      color: #334155;
     }
 
     .gallery {
@@ -62,30 +68,32 @@
     }
 
     .gallery-item {
-      background-color: #1b263b;
-      border-radius: 10px;
+      background-color: #ffffff;
+      border-radius: 12px;
       padding: 10px;
       max-width: 300px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .gallery-item img {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
     }
 
     .gallery-item p {
       text-align: center;
       margin-top: 10px;
       font-size: 14px;
+      color: #334155;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #1b263b;
+      background-color: #fcd34d;
       margin-top: 40px;
-      color: #ccc;
+      color: #1e293b;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -109,18 +117,16 @@
     <div class="gallery">
       <div class="gallery-item">
         <img src="image/bootcamp.png" alt="Sertifikat 1">
-        <p>Pernah mengikuti kegiatan sertifikasi kampus bersertifikasi IT Bootcamp "Sofware Development"</p>
+        <p>Pernah mengikuti kegiatan sertifikasi kampus bersertifikasi IT Bootcamp "Software Development"</p>
       </div>
-<div class="gallery-item">
-        <img src="image/database.png" alt="Sertifikat 1">
-        <p>Pernah mengikuti kegiatan sertifikasi Ujian Database System yang di selenggarakan oleh Ikatan Ahli Informatika Indonesia"</p>
-      </div>
-     
       <div class="gallery-item">
-        <img src="image/kominfo.png" alt="Sertifikat 2">
-        <p>Pernah mengikuti kegiatan  Fundamentals of Cloud Computing and Networking Administration for Digital Entrepreneur Digital Entrepreneurship Academy Digital Talent Scholarship 2024 yang diselenggarakan oleh Puslitbang SDP3I pada tanggal 6 Agustus 2024 - 15 Desember 2024 selama 84 Jam Pelatihan</p>
+        <img src="image/database.png" alt="Sertifikat 2">
+        <p>Pernah mengikuti kegiatan sertifikasi Ujian Database System yang diselenggarakan oleh Ikatan Ahli Informatika Indonesia</p>
       </div>
-     
+      <div class="gallery-item">
+        <img src="image/kominfo.png" alt="Sertifikat 3">
+        <p>Pelatihan Cloud & Networking untuk Digital Entrepreneur dari Kominfo (84 jam)</p>
+      </div>
     </div>
   </section>
 
