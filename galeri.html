@@ -5,22 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeri Sertifikat - Syahrul Rahmadan</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f9ff;
+      background-color: #fef9ef;
       color: #1e293b;
+      line-height: 1.6;
     }
 
-    header {
-      background-color: #fcd34d;
-      padding: 20px;
-      text-align: center;
+    nav {
+      background: #fcd34d;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    header h1 {
-      margin: 0;
+    nav h1 {
+      font-size: 1.8rem;
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
       color: #1e293b;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #2563eb;
     }
 
     nav {
@@ -99,41 +127,40 @@
 </head>
 <body>
 
-  <header>
-    <h1>Galeri Sertifikat</h1>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="project.html">Project</a>
-      <a href="about.html">About Me</a>
-    </nav>
-  </header>
+  <nav>
+    <h1>ArulPorto</h1>
+    <ul>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="project.html">Project</a></li>
+      <li><a href="galeri.html">Gallery</a></li>
+      <li><a href="minat.html">Minat</a></li>
+    </ul>
+  </nav>
 
   <section>
     <h2>Dokumentasi Sertifikat</h2>
-    <p>
-      Berikut adalah beberapa sertifikat yang saya peroleh selama mengikuti pelatihan dan pengembangan skill.
-    </p>
+    <p>Berikut adalah beberapa sertifikat yang saya peroleh selama mengikuti pelatihan dan pengembangan skill.</p>
 
     <div class="gallery">
       <div class="gallery-item">
         <img src="image/bootcamp.png" alt="Sertifikat 1">
-        <p>Pernah mengikuti kegiatan sertifikasi kampus bersertifikasi IT Bootcamp "Software Development"</p>
+        <p>IT Bootcamp “Software Development”</p>
       </div>
       <div class="gallery-item">
         <img src="image/database.png" alt="Sertifikat 2">
-        <p>Pernah mengikuti kegiatan sertifikasi Ujian Database System yang diselenggarakan oleh Ikatan Ahli Informatika Indonesia</p>
+        <p>Ujian Database System oleh IAII</p>
       </div>
       <div class="gallery-item">
         <img src="image/kominfo.png" alt="Sertifikat 3">
-        <p>Pelatihan Cloud & Networking untuk Digital Entrepreneur dari Kominfo (84 jam)</p>
+        <p>Pelatihan Cloud & Networking (Kominfo)</p>
       </div>
       <div class="gallery-item">
         <img src="image/entrepreneurship.png" alt="Sertifikat 4">
-        <p>Pernah mengikuti kegiatan sertifikasi kampus bersertifikasi Entrepreneurship</p>
+        <p>Sertifikasi Entrepreneurship</p>
       </div>
       <div class="gallery-item">
         <img src="image/serkomtkj.jpg" alt="Sertifikat 5">
-        <p>Pernah mengikuti kegiatan sertifikasi kompetensi KKNI level II Pada KompetensiKeahlian Teknik Komputer dan Jaringan diselenggarakan oleh SMK Tamtama 1 Sidareja & BNSP pada 17 Mei 2022</p>
+        <p>Sertifikasi Kompetensi TKJ Level II (SMK Tamtama & BNSP)</p>
       </div>
     </div>
   </section>
