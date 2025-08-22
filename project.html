@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aktivitas dan Pengalaman Perkuliahan</title>
+  <title>Kumpulan Pengerjaan Project</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -66,57 +66,71 @@
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1100px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
-    .project {
-      background-color: var(--card-bg);
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: var(--accent-color);
+    }
+
+    .project-section {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      background: var(--card-bg);
+      padding: 25px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 25px;
       margin-bottom: 40px;
-      transition: transform 0.3s ease;
     }
 
-    .project:hover {
-      transform: translateY(-5px);
+    .project-info {
+      flex: 1;
     }
 
-    .project h2 {
-      color: var(--accent-color);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      font-size: 1.6em;
-      gap: 10px;
-    }
-
-    .project ul {
-      padding-left: 25px;
+    .project-info h2 {
       margin-bottom: 15px;
+      font-size: 1.4rem;
+      color: var(--text-color);
     }
 
-    .project ul li {
+    .project-info ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .project-info ul li {
       margin-bottom: 8px;
       color: var(--card-text);
     }
 
-    .project-image {
-      text-align: center;
-      margin-top: 15px;
+    .project-gallery {
+      flex: 2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
 
-    .project-image img {
-      max-width: 100%;
+    .gallery-item {
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
       border-radius: 10px;
       box-shadow: var(--shadow);
-      transition: transform 0.3s;
+      margin-bottom: 10px;
     }
 
-    .project-image img:hover {
-      transform: scale(1.02);
+    .gallery-item p {
+      font-size: 0.9rem;
+      color: var(--card-text);
     }
 
     footer {
@@ -129,27 +143,12 @@
     }
 
     @media (max-width: 768px) {
-      nav {
+      .project-section {
         flex-direction: column;
-        align-items: flex-start;
       }
 
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-
-      nav h1 {
-        font-size: 1.5rem;
-      }
-
-      .container {
-        padding: 0 15px;
-      }
-
-      .project h2 {
-        font-size: 1.3em;
+      .project-gallery {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -162,7 +161,6 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Me</a></li>
-
       <li><a href="galeri.html">Gallery</a></li>
       <li><a href="minat.html">Minat</a></li>
     </ul>
@@ -170,55 +168,42 @@
 
   <!-- Konten Utama -->
   <div class="container">
-    <div class="project">
-      <h2><span>💻</span>Analisis Penjualan Super Store (source data:Kaggle)</h2>
-      <ul>
-        <li>Menggunakan Tools Anaconda Vanigator tepatnya Jupiter Notebook.</li>
-        <li>Melakukan Koneksi Python ke Database (Mysql) menggunakan library mysql.connector.</li>
-        <li>Melakukan Load Data menggunakan library pandas.</li>
-        <li>Melakukan Explorasi data untuk menghindari data kosong/tidak lengkap.</li>
-        <li>Melakukan Data Cleaning untuk pembersihan data</li>
-        <li>Melakukan Analisis data.</li>
-        <li>Melakukan Visualisasi data menggunakan library matplotlib.pyplot.</li>
-      </ul>
-      <div class="project-image">
-        <img src="image/analisis1.png" alt="Analisis Penjualan" />
-        <img src="image/analisis2.png" alt="Analisis Penjualan" />
+    <h1 class="title">Kumpulan Pengerjaan Project</h1>
+
+    <!-- Project 1 -->
+    <div class="project-section">
+      <div class="project-info">
+        <h2>Analisis data jumlah kematian bayi neonatal di provinsi Aceh</h2>
+        <ul>
+          <li>Melakukan Data Eksplorasi dan Data Cleaning guna untuk menghilangkan data kosong atau data double.</li>
+          <li>Melakukan pengelompokan perhitungan masing masing data</li>
+          <li>Melakukan analyst dengan cara create list question.</li>
+          <li>Melakukan Pivot Table untuk hitung jumlah puskesmas, jumlah kematian bayi laki-laki dan perempuan</li>
+          <li>Melakukan Pivot Chart untuk visualisasi data</li>
+        </ul>
       </div>
-    </div>
-  <div class="container">
-    <div class="project">
-      <h2><span>💻</span> Sistem Informasi Penjualan Baju</h2>
-      <ul>
-        <li>Melakukan analisis kebutuhan dan menyusun project charter.</li>
-        <li>Melakukan pengujian sistem serta mendukung tahap pengujian awal.</li>
-      </ul>
-      <div class="project-image">
-        <img src="image/sistem-penjualan.png" alt="Tugas Sistem Penjualan" />
+      <div class="project-gallery">
+        <div class="gallery-item">
+          <img src="image/project/dataawal.png" alt="Sistem Penjualan 1">
+          <p>Data Awal data yang sudah di eksplorasi dan sudah di cleaning.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="image/project/pivottable.png" alt="Sistem Penjualan 2">
+          <p>Pivot table untuk menghitung jumlah puskesmas dan kematian bayi laki-laki dan perempuan</p>
+        </div>
+        <div class="gallery-item">
+          <img src="image/project/kabupaten.png" alt="Sistem Penjualan 3">
+          <p>Pengelompokan Kematian bayi neonatal berdasarkan kabupaten</p>
+        </div>
+        <div class="gallery-item">
+          <img src="image/project/dash.png" alt="Sistem Penjualan 4">
+          <p>Dashboard hasil akhir untuk visualisasi data</p>
+        </div>
       </div>
     </div>
 
-    <div class="project">
-      <h2><span>🚀</span>Melakukan Pengujian Web Menggunakan Black Box Texting</h2>
-      <ul>
-        <li>Melakukan pengujian fitur website untuk menghindari kesalahan sistem berjalan.</li>
-        <li>Mendokumentasi pengujian dengan mencatat skenario pengujian, test case, hasil yang diharapkan, hasil pengujian, dan kesimpulan.</li>
-      </ul>
-      <div class="project-image">
-        <img src="image/blackbox.png" alt="Tugas Odoo" />
-      </div>
-    </div>
+    
 
-    <div class="project">
-      <h2><span>🔬</span> Analisa & Perancangan Sistem</h2>
-      <ul>
-        <li>Melakukan analisis kebutuhan sistem sistem</li>
-        <li>Merancang spesifikasi database sistem.</li>
-      </ul>
-      <div class="project-image">
-        <img src="image/db.png" alt="Tugas Analisa Sistem" />
-      </div>
-    </div>
   </div>
 
   <!-- Footer -->

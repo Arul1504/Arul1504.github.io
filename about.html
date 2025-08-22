@@ -1,177 +1,240 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tentang Saya - Syahrul Rahmadan</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #fef9ef;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    nav {
-      background: #fcd34d;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    nav h1 {
-      font-size: 1.8rem;
-      color: #1d4ed8;
-      font-weight: 700;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 1.2rem;
-      list-style: none;
-    }
-
-    nav ul li a {
-      color: #1e293b;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      color: #2563eb;
-    }
-
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #1e293b;
-    }
-
-    nav a {
-      color: #1e293b;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #7c3aed;
-    }
-
-    .container {
-      display: flex;
-      gap: 30px;
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 30px auto;
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      flex-wrap: wrap;
-    }
-
-    .profile-container {
-      flex: 1;
-      text-align: center;
-    }
-
-    img.profile {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border: 4px solid #fcd34d;
-      box-shadow: 0 0 10px #fde68a;
-      border-radius: 12px;
-    }
-
-    .text-content {
-      flex: 2;
-    }
-
-    h1 {
-      color: #f59e0b;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 15px;
-      color: #334155;
-      text-align: justify;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #fcd34d;
-      color: #1e293b;
-      font-size: 0.9rem;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-        text-align: center;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Saya - Syahrul Rahmadan</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Quicksand", sans-serif;
+        background-color: #fef9ef;
+        color: #333;
+        line-height: 1.6;
       }
 
-      .text-content {
-        text-align: justify;
+      nav {
+        background: #fcd34d;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      nav h1 {
+        font-size: 1.8rem;
+        color: #1d4ed8;
+        font-weight: 700;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 1.2rem;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+
+      nav ul li a {
+        color: #1e293b;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #2563eb;
+      }
+
+      .container {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Bagian profil utama */
+      .profile-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
       }
 
       img.profile {
-        width: 180px;
-        height: 180px;
-        margin-bottom: 20px;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border: 4px solid #fcd34d;
+        border-radius: 12px;
       }
 
-      h1 {
-        font-size: 1.5rem;
+      .profile-header h2 {
+        font-size: 1.8rem;
+        color: #1e293b;
+        margin: 0;
       }
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <h1>ArulPorto</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="project.html">Project</a></li>
-      <li><a href="galeri.html">Gallery</a></li>
-      <li><a href="minat.html">Minat</a></li>
-    </ul>
-  </nav>
 
-  <div class="container">
-    <div class="profile-container">
-      <img src="image/foto2.jpg" alt="Syahrul Rahmadan" class="profile">
+      .profile-info {
+        text-align: right;
+        font-size: 1rem;
+        color: #334155;
+      }
+
+      .profile-info p {
+        margin-bottom: 6px;
+      }
+
+      /* Isi konten */
+      .content {
+        margin-top: 20px;
+      }
+
+      .content p {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: #334155;
+      }
+
+      .content p a {
+        color: #2563eb;
+        text-decoration: none;
+      }
+
+      .content p a:hover {
+        text-decoration: underline;
+      }
+
+      .icon-text {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+      }
+
+      .icon-text span {
+        font-size: 1.2rem;
+        color: #7c3aed;
+      }
+
+      h3 {
+        margin-top: 15px;
+        font-size: 1.2rem;
+        color: #f59e0b;
+      }
+
+      ul.skills {
+        list-style: none;
+        margin-top: 5px;
+      }
+
+      ul.skills li {
+        background: #fef3c7;
+        margin-bottom: 6px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-right: 6px;
+        font-size: 0.95rem;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #fcd34d;
+        color: #1e293b;
+        font-size: 0.9rem;
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .profile-top {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .profile-info {
+          text-align: center;
+          margin-top: 10px;
+        }
+        .icon-text {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>ArulPorto</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="galeri.html">Gallery</a></li>
+        <li><a href="minat.html">Minat</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <!-- Bagian profil -->
+      <div class="profile-top">
+        <!-- Foto + Nama -->
+        <div class="profile-header">
+          <img src="image/foto2.jpg" alt="Foto" class="profile" />
+          <h2>Syahrul Rahmadan</h2>
+        </div>
+
+        <!-- Info kanan -->
+        <div class="profile-info">
+          <p><strong>Alamat:</strong> Cilacap, Jawa Tengah</p>
+          <p><strong>Domisili:</strong> Kota Tangerang, Banten</p>
+          <p><strong>Email:</strong> rahmadansyahrul214@gmail.com</p>
+        </div>
+      </div>
+
+      <!-- Konten -->
+      <div class="content">
+        <p>Mahasiswa tahun ke-4 Program Studi Sistem Informasi di Universitas Bina Sarana Informatika 
+(UBSI), memiliki minat besar dalam bidang analisis data. Terbiasa mengolah dan menganalisis 
+data menggunakan teknik statistik serta tools analisis seperti Excel, Google Sheet, dan Tableau. 
+Memahami konsep pengolahan data mulai dari pengumpulan, pembersihan, visualisasi, hingga 
+penarikan kesimpulan untuk mendukung pengambilan keputusan. Memiliki semangat belajar 
+yang tinggi, teliti dalam bekerja, dan siap mengembangkan keahlian profesional di bidang data 
+analytics, khususnya dalam aspek eksplorasi data, pembuatan laporan, dan interpretasi hasil 
+analisis.
+        </p>
+        
+        <h3>Soft Skill:</h3>
+        <ul class="skills">
+          <li>Communication</li>
+          <li>Problem Solving</li>
+          <li>Teamwork</li>
+        </ul>
+
+        <h3>Hard Skill:</h3>
+        <ul class="skills">
+          <li>SQL</li>
+          <li>Basic Python</li>
+          <li>Analytics Data</li>
+          <li>Microsoft Excel</li>
+          <li>Microsoft Word</li>
+          <li>Microsoft Powerpoint</li>
+          <li>Tableau</li>
+        </ul>
+      </div>
     </div>
-    <div class="text-content">
-      <h1>Tentang Saya</h1>
-      <p>
-        Saya Syahrul Rahmadan, mahasiswa semester 7 Sistem Informasi di Universitas Bina Sarana Informatika (UBSI) yang tertarik dalam bidang Data Analyst dan perancangan sistem.
-      </p>
-      <p>
-        Saya aktif mengembangkan kemampuan dalam menganalisis data, menyusun dokumentasi teknis, serta menguji sistem berbasis web. Saya juga tertarik mengelola proyek kecil berbasis teknologi, belajar framework baru, dan membuat dokumentasi sistem yang rapi dan efisien.
-      </p>
-    </div>
-  </div>
 
-  <div class="footer">
-    &copy; 2025 Syahrul Rahmadan. All rights reserved.
-  </div>
-
-</body>
+    <div class="footer">&copy; 2025 Syahrul Rahmadan. All rights reserved.</div>
+  </body>
 </html>
