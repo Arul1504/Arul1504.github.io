@@ -1,284 +1,362 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syahrul Rahmadan | Portofolio</title>
+    <title>Syahrul Portfolio</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --primary-bg: #f5f5f5; /* abu muda background */
-        --nav-bg: #e5e5e5; /* abu untuk navbar */
-        --accent-color: #000; /* hitam untuk judul/teks penting */
-        --text-color: #111; /* hitam teks utama */
-        --card-bg: #fff; /* putih untuk card */
-        --card-text: #333; /* abu gelap untuk teks card */
-        --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        --radius: 12px;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Poppins", sans-serif;
-        background-color: var(--primary-bg);
-        color: var(--text-color);
-        line-height: 1.6;
-      }
-      main {
-        flex: 1;
-      }
-
-      /* Header / Navbar */
-      nav {
-        background: var(--nav-bg);
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        box-shadow: var(--shadow);
-      }
-
-      nav h1 {
-        font-size: 1.8rem;
-        color: var(--accent-color);
-        font-weight: 700;
-      }
-
-      nav ul {
-        display: flex;
-        gap: 1.2rem;
-        list-style: none;
-        flex-wrap: wrap;
-      }
-
-      nav ul li a {
-        color: var(--text-color);
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s ease;
-      }
-
-      nav ul li a:hover {
-        color: #555;
-      }
-
-      .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 3rem 2rem;
-        flex-wrap: wrap;
-      }
-
-      .hero-text {
-        max-width: 600px;
-      }
-
-      .hero-text h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: #000000; /* Hitam */
-      }
-
-      .hero-text h1 span {
-        color: #000000; /* Hitam */
-      }
-
-      .hero-text p {
-        margin-bottom: 2rem;
-        color: #000000; /* Hitam */
-      }
-
-      .buttons a {
-        text-decoration: none;
-        margin-right: 1rem;
-        padding: 0.7rem 1.2rem;
-        background-color: #000000; /* Hitam */
-        color: #ffffff; /* Putih */
-        border-radius: 8px;
-        font-weight: bold;
-        transition: background 0.3s;
-        display: inline-block;
-        margin-top: 0.5rem;
-      }
-
-      .buttons a:hover {
-        background-color: #333333; /* Abu-abu gelap saat hover */
-      }
-
-      .hero-image img {
-        width: 220px;
-        border-radius: 50%;
-        box-shadow: none; /* Hapus bayangan */
-        transition: transform 0.3s;
-      }
-
-      .hero-image img:hover {
-        transform: scale(1.05);
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        background-color: #000000; /* Hitam */
-        color: #ffffff; /* Putih */
-        font-size: 0.9rem;
-        margin-top: auto; /* dorong footer ke paling bawah */
-      }
-
-      .jumping-text span {
-        display: inline-block;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #111;
-        animation: jump 3s ease-in-out infinite;
-      }
-
-      @keyframes jump {
-        0% {
-          transform: translateY(0);
-        }
-        10% {
-          transform: translateY(-15px);
-        }
-        20% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-
-      /* delay biar loncat bergantian */
-      .jumping-text span:nth-child(1) {
-        animation-delay: 0s;
-      }
-      .jumping-text span:nth-child(2) {
-        animation-delay: 0.1s;
-      }
-      .jumping-text span:nth-child(3) {
-        animation-delay: 0.2s;
-      }
-      .jumping-text span:nth-child(4) {
-        animation-delay: 0.3s;
-      }
-      .jumping-text span:nth-child(5) {
-        animation-delay: 0.4s;
-      }
-      .jumping-text span:nth-child(6) {
-        animation-delay: 0.5s;
-      }
-      .jumping-text span:nth-child(7) {
-        animation-delay: 0.6s;
-      }
-      .jumping-text span:nth-child(8) {
-        animation-delay: 0.7s;
-      }
-      .jumping-text span:nth-child(9) {
-        animation-delay: 0.8s;
-      }
-      .jumping-text span:nth-child(10) {
-        animation-delay: 0.9s;
-      }
-      .jumping-text span:nth-child(11) {
-        animation-delay: 1s;
-      }
-      .jumping-text span:nth-child(12) {
-        animation-delay: 1.1s;
-      }
-      .jumping-text span:nth-child(13) {
-        animation-delay: 1.2s;
-      }
-      .jumping-text span:nth-child(14) {
-        animation-delay: 1.3s;
-      }
-      .jumping-text span:nth-child(15) {
-        animation-delay: 1.4s;
-      }
-      .jumping-text span:nth-child(16) {
-        animation-delay: 1.5s;
-      }
-
-      @media (max-width: 768px) {
-        .hero {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        nav {
-          flex-direction: column;
-          gap: 1rem;
-        }
-
-        nav ul {
-          flex-direction: column;
-          gap: 0.8rem;
-          align-items: center;
-          margin-top: 1rem;
-        }
-
-        .hero-image {
-          margin-top: 2rem;
-        }
-
-        .buttons a {
-          margin: 0.5rem auto;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Navbar -->
     <nav>
-      <h1 class="jumping-text">
-        <span>s</span><span>y</span><span>a</span><span>h</span><span>r</span
-        ><span>u</span><span>l</span>
-        <span> </span>
-        <span>r</span><span>a</span><span>h</span><span>m</span><span>a</span
-        ><span>d</span><span>a</span><span>n</span>
-      </h1>
+      <div class="logo"><span>S</span>Syahrul Rahmadan</div>
       <ul>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="galeri.html">Galery</a></li>
-        <li><a href="project.html">Project</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#study">Study</a></li>
+        <li><a href="#sertifikat">Certification</a></li>
       </ul>
+      <a href="#contact" class="contact-btn">Contact</a>
     </nav>
 
-    <main>
-      <section class="hero">
-        <div class="hero-text">
-          <h1>Hi, I'm <span>Syahrul Rahmadan</span></h1>
-          <p>
-            Interested in leveraging data analysis and administration to drive
-            meaningful impact and informed decision-making.
-          </p>
-          
-          <div class="buttons">
-            <a href="mailto:rahmadansyahrul214@gmail.com">Email</a>
-            <a href="https://instagram.com/xy_z758" target="_blank"
-              >Instagram</a
-            >
-            <a
-              href="https://linkedin.com/in/syahrul-rahmadan-80362231a"
-              target="_blank"
-              >LinkedIn</a
-            >
-            <br><br><br><br><br><br>
+    <!-- Home Section -->
+    <section id="home" class="home">
+      <div class="content">
+        <h1>Hello, I’m <br />Syahrul Rahmadan</h1>
+        <p>
+          Interested in leveraging data analysis and administration to drive
+          meaningful impact and informed decision-making.
+        </p>
+        <a href="#contact" class="btn">Say Hello!</a>
+      </div>
+      <div class="img-box">
+        <img src="image/profil.jpg" alt="Syahrul" />
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <div class="about-img">
+          <img src="image/foto1-.png" alt="Profile Picture" />
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="image/profil.jpg" alt="Foto Profil Syahrul" />
+
+        <div class="about-text">
+          <h1>Experience Data Analyst</h1>
+          <p>
+            A fourth-year Information Systems student at Bina Sarana Informatika
+            University (UBSI) with a strong interest in data analysis.
+            Experienced in processing and analyzing data using statistical
+            methods and analytical tools such as Excel, Google Sheets, and
+            Tableau. Familiar with the entire data workflow, including data
+            collection, cleaning, visualization, and drawing insights to support
+            decision-making. Highly motivated to learn, detail-oriented, and
+            eager to develop professional skills in data analytics, particularly
+            in data exploration, report generation, and interpretation of
+            analysis results.
+          </p>
+          <div class="about-buttons">
+            <a href="#portfolio" class="btn-primary">My Projects</a>
+            <a href="https://raw.githubusercontent.com/Arul1504/Project-Arship/f02be844a20ef4d3310759a6bc0a8196ee653ab4/cv/CV%20Syahrul%20Rahmadan.pdf" class="btn-secondary"
+              ><i class="fa fa-download"></i> Download CV</a
+            >
+          </div>
         </div>
-      </section>
-    </main>
-    <footer>&copy; 2025 Syahrul Rahmadan. All rights reserved.</footer>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="work-process">
+      <div class="work-text">
+        <h2>Work Process</h2>
+        <p>
+          Driven by data and guided by insights, I transform raw information
+          into meaningful stories that support decision-making. Every dataset,
+          analysis, and visualization is crafted with precision — merging
+          statistical accuracy with business clarity.
+        </p>
+      </div>
+
+      <div class="work-cards">
+        <div class="card">
+          <div class="icon">📅</div>
+          <h3>1. Cleaning</h3>
+          <p>
+            Ensuring data quality by identifying and handling missing values,
+            duplicates, and inconsistencies. This step transforms raw data into
+            accurate, structured, and reliable information ready for analysis.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">📈</div>
+          <h3>2. Analyst Data</h3>
+          <p>
+            Applying statistical methods and analytical tools to explore
+            patterns, trends, and relationships within datasets. Turning numbers
+            into meaningful insights that can guide strategies and
+            decision-making.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">✏️</div>
+          <h3>3. Visualisasi</h3>
+          <p>
+            Transforming data into clear charts, dashboards, and interactive
+            reports that are easy to understand. Each visualization is designed
+            to highlight patterns, trends, and insights that support better
+            decision-making.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>4. Report</h3>
+          <p>
+            Compiling analysis results into clear and structured reports that
+            provide actionable insights. Each report is designed to communicate
+            findings effectively, helping stakeholders make informed decisions
+            with confidence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="portfolio-header">
+        <h1>Portfolio</h1>
+        <p>
+          Here's a selection of my recent work, showcasing my skills in creating
+          user-centric and visually appealing interfaces.
+        </p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="image/dash.png" alt="Project 1" />
+          <div class="card-content">
+            <span class="tag">Data Analyst</span>
+            <h2>
+              Analisis data jumlah kematian bayi neonatal di provinsi Aceh
+            </h2>
+            <p>
+              1. Melakukan Data Eksplorasi dan Data Cleaning guna untuk
+              menghilangkan data kosong atau data double. <br />
+              2. Melakukan pengelompokan perhitungan masing masing data. <br />
+              3. Melakukan analyst dengan cara create list question. <br />
+              4. Melakukan Pivot Table untuk hitung jumlah puskesmas, jumlah
+              kematian bayi laki-laki dan perempuan. <br />
+              5. Melakukan Pivot Chart untuk visualisasi data
+            </p>
+            <a
+              href="https://github.com/Arul1504/Project-Arship/raw/refs/heads/main/Neonatal/jumlah-kematian-neonatal-bayi-dan-balita.xlsx"
+              class="case-btn"
+              >Case Study →</a
+            >
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="image/project1.png" alt="Project 2" />
+          <div class="card-content">
+            <span class="tag">Data Analyst</span>
+            <h2>Analisis data Bussines Coffee Shop, Source by Kaggle</h2>
+            <p>
+              1. Melakukan Data Eksplorasi dan Data Cleaning guna untuk
+              menghilangkan data kosong atau data double. <br />
+              2. Melakukan pengelompokan perhitungan masing masing data. <br />
+              3. Melakukan analyst dengan cara create list question. <br />
+              4. Melakukan Pivot Chart untuk visualisasi data. <br />
+            </p>
+            <a
+              href="https://github.com/Arul1504/Project-Arship/raw/refs/heads/main/Coffe%20Shop/Coffe%20Shop.xlsx"
+              class="case-btn"
+              >Case Study →</a
+            >
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="image/dataakhir.png" alt="Project 2" />
+          <div class="card-content">
+            <span class="tag">Pengolahan Data</span>
+            <h2>Administrasi Pengolahan Data Karyawan</h2>
+            <p>
+              1. Mengelola dan membersihkan data karyawan agar rapi dan konsisten. <br>
+2. Mengunakaan beberapa rumus seperti if, subtitude, proper untuk rekap data. <br>
+3. Membuat rekap laporan data menggunakan Excel. <br>
+4. Menyusun laporan administrasi data untuk mendukung kegiatan operasional dan pengambilan keputusan. <br />
+            </p>
+            <a
+              href="https://github.com/Arul1504/Project-Arship/raw/refs/heads/main/Coffe%20Shop/Coffe%20Shop.xlsx"
+              class="case-btn"
+              >Case Study →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="study" class="study">
+      <h2>Study</h2>
+
+      <div class="study-info">
+        <div class="info-box">
+          <h3>Universitas</h3>
+          <p>Universitas Bina Sarana Informatika</p>
+        </div>
+        <div class="info-box">
+          <h3>Jurusan</h3>
+          <p>Sistem Informasi</p>
+        </div>
+        <div class="info-box">
+          <h3>IPK</h3>
+          <p>3.92 / 4.00</p>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="skill-box">
+          <h3>Hard Skills</h3>
+          <ul>
+            <li>SQL & Database Management</li>
+            <li>Basic Python (Pandas, Matplotlib)</li>
+            <li>Data Visualization (Tableau, Excel)</li>
+            <li>
+              Excel (VLOOKUP, HLOOKUP, SUM, AVERAGE, COUNT, PIVOT, MAX, MIN,
+              SUM, IF)
+            </li>
+          </ul>
+        </div>
+        <div class="skill-box">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Problem Solving</li>
+            <li>Teamwork & Collaboration</li>
+            <li>Communication</li>
+            <li>Time Management</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Sertifikat 1 -->
+    <section id="sertifikat" class="sertifikat">
+      <h2>Sertifikat</h2>
+
+      <div class="card-container">
+        <!-- Sertifikat 1 -->
+        <div class="card">
+          <a href="image/bootcamp.png" target="_blank">
+            <img src="image/bootcamp.png" alt="Sertifikat 1" />
+          </a>
+          <h3>IT Bootcamp “Software Development”</h3>
+          <p>Diperoleh: 2024</p>
+        </div>
+
+        <!-- Sertifikat 2 -->
+        <div class="card">
+          <a href="image/database.png" target="_blank">
+            <img src="image/database.png" alt="Sertifikat 2" />
+          </a>
+          <h3>Database System oleh IAII</h3>
+          <p>Diperoleh: 2023</p>
+        </div>
+
+        <!-- Sertifikat 3 -->
+        <div class="card">
+          <a href="image/kominfo.png" target="_blank">
+            <img src="image/kominfo.png" alt="Sertifikat 3" />
+          </a>
+          <h3>Pelatihan Cloud & Networking (Kominfo)</h3>
+          <p>Diperoleh: 2024</p>
+        </div>
+        <!-- Sertifikat 3 -->
+        <div class="card">
+          <a href="image/entrepreneurship.png" target="_blank">
+            <img src="image/entrepreneurship.png" alt="Sertifikat 3" />
+          </a>
+          <h3>Sertifikasi Entrepreneurship</h3>
+          <p>Diperoleh: 2022</p>
+        </div>
+        <!-- Sertifikat 3 -->
+        <div class="card">
+          <a href="image/serkomtkj.jpg" target="_blank">
+            <img src="image/serkomtkj.jpg" alt="Sertifikat 3" />
+          </a>
+          <h3>Sertifikasi Kompetensi TKJ Level II (SMK Tamtama & BNSP)</h3>
+          <p>Diperoleh: 2022</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Contact Me Now</h2>
+
+          <div class="info-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <h4>Address:</h4>
+              <p>Kota Tangerang, 15151</p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h4>My Email:</h4>
+              <p>rahmadansyahrul214@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://instagram.com/xy_z758"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-behance"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Highlight nav link saat scroll
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav ul li a");
+
+      window.onscroll = () => {
+        let current = "";
+        sections.forEach((sec) => {
+          const top = window.scrollY;
+          const offset = sec.offsetTop - 150;
+          const height = sec.offsetHeight;
+          if (top >= offset && top < offset + height) {
+            current = sec.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      };
+    </script>
   </body>
 </html>
